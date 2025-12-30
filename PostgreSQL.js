@@ -32,11 +32,11 @@ app.use(express.json());
 
 // Tạo connection pool 1 lần
 const pool = new Pool({
-  host: "localhost",
-  user: "postgres",
-  password: "haibui1609",
-  database: "postgres",
-  port: 3307,
+  host: "postgresql://root:4IsLhSh5wMzozc0QbQxn1zf0rPAeGSZc@dpg-d59tqrf5r7bs739gft10-a.singapore-postgres.render.com/postgresdb_h246",
+  user: "root",
+  password: "4IsLhSh5wMzozc0QbQxn1zf0rPAeGSZc",
+  database: "postgresdb_h246",
+  port: 5432,
 });
 
 io.on("connection", async (socket) => {

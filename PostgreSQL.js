@@ -37,6 +37,7 @@ const pool = new Pool({
   password: "4IsLhSh5wMzozc0QbQxn1zf0rPAeGSZc",
   database: "postgresdb_h246",
   port: 5432,
+  ssl: { rejectUnauthorized: false} 
 });
 
 io.on("connection", async (socket) => {

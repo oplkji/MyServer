@@ -44,12 +44,10 @@ io.on("connection", async (socket) => {
   console.log("New client connected!!!");
 
   const latest_data_node1 = await pool.query(
-    // "SELECT * FROM doantotnghiep WHERE nodeID = 1 AND addressid = 3 ORDER BY id DESC LIMIT 1"
-    "SELECT * FROM doantotnghiep WHERE id = 485"
+    "SELECT * FROM doantotnghiep WHERE nodeID = 1 AND addressid = 3 ORDER BY id DESC LIMIT 1"
   );
   const latest_data_node2 = await pool.query(
-    // "SELECT * FROM doantotnghiep WHERE nodeID = 2 AND addressid = 3 ORDER BY id DESC LIMIT 1"
-    "SELECT * FROM doantotnghiep WHERE id = 484"
+    "SELECT * FROM doantotnghiep WHERE nodeID = 2 AND addressid = 3 ORDER BY id DESC LIMIT 1"
   );
   socket.emit("init-data", {
     node1: latest_data_node1.rows[0] || null,
